@@ -2,14 +2,6 @@
 
 Pytorch implementation for the causality-aware multiple instance learning model described in the paper "MeCaMIL: Causality-Aware Multiple Instance Learning for Fair and Interpretable Whole Slide Image Diagnosis".
 
-<div align="center">
-  <img src="thumbnails/overview.png" width="700px" />
-</div>
-
-<div align="center">
-  <img src="thumbnails/overview-2.png" width="700px" />
-</div>
-
 ## Installation
 Install [anaconda/miniconda](https://docs.conda.io/en/latest/miniconda.html)  
 Required packages
