@@ -1,0 +1,496 @@
+2024-11-05 01:48:40,194 - Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-05 01:48:40,195 - Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2024-11-05 01:48:40,195 - NumExpr defaulting to 16 threads.
+2024-11-05 01:49:14,428 - Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-05 01:49:14,448 - Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2024-11-05 01:49:14,449 - NumExpr defaulting to 16 threads.
+2024-11-05 01:49:33,723 - Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-05 01:49:33,724 - Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2024-11-05 01:49:33,724 - NumExpr defaulting to 16 threads.
+2024-11-05 01:51:57,660 - Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-05 01:51:57,661 - Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2024-11-05 01:51:57,661 - NumExpr defaulting to 16 threads.
+2024-11-05 01:52:13,539 - Running on: cuda
+2024-11-05 01:52:16,859 - Pre-trained weights not found. Training from scratch.
+2024-11-05 01:55:41,448 - Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-05 01:55:41,448 - Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2024-11-05 01:55:41,448 - NumExpr defaulting to 16 threads.
+2024-11-05 01:55:49,029 - Running on: cuda
+2024-11-05 01:55:52,297 - Pre-trained weights not found. Training from scratch.
+2024-11-05 02:02:46,884 - Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-05 02:02:46,885 - Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2024-11-05 02:02:46,885 - NumExpr defaulting to 16 threads.
+2024-11-05 02:02:54,221 - Running on: cuda
+2024-11-05 02:02:57,202 - Pre-trained weights not found. Training from scratch.
+2024-11-05 02:06:28,443 - Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-05 02:06:28,444 - Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2024-11-05 02:06:28,445 - NumExpr defaulting to 16 threads.
+2024-11-05 02:06:36,009 - Running on: cuda
+2024-11-05 02:06:38,945 - Pre-trained weights not found. Training from scratch.
+2024-11-05 02:07:23,813 - Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-05 02:07:23,813 - Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2024-11-05 02:07:23,813 - NumExpr defaulting to 16 threads.
+2024-11-05 02:07:31,244 - Running on: cuda
+2024-11-05 02:07:34,332 - Pre-trained weights not found. Training from scratch.
+2024-11-05 02:07:45,693 - Iteration 0, Train Loss: 6.9303
+2024-11-05 02:12:02,041 - Iteration 25, Train Loss: 6.9252
+2024-11-05 02:17:16,367 - Iteration 50, Train Loss: 6.8987
+2024-11-05 02:22:06,205 - Iteration 75, Train Loss: 6.8756
+2024-11-05 02:28:02,094 - Iteration 100, Train Loss: 6.8591
+2024-11-05 02:33:01,732 - Iteration 125, Train Loss: 6.7915
+2024-11-05 02:38:24,482 - Iteration 150, Train Loss: 6.6834
+2024-11-05 02:43:41,835 - Iteration 175, Train Loss: 6.6756
+2024-11-05 02:48:59,897 - Iteration 200, Train Loss: 6.5930
+2024-11-05 02:54:07,729 - Iteration 225, Train Loss: 6.5389
+2024-11-05 02:59:34,490 - Iteration 250, Train Loss: 6.5018
+2024-11-05 03:04:19,979 - Iteration 275, Train Loss: 6.4668
+2024-11-05 03:09:19,789 - Iteration 300, Train Loss: 6.4819
+2024-11-05 03:14:21,436 - Iteration 325, Train Loss: 6.4076
+2024-11-05 03:19:25,625 - Iteration 350, Train Loss: 6.3929
+2024-11-05 03:24:47,812 - Iteration 375, Train Loss: 6.3802
+2024-11-05 03:30:19,591 - Iteration 400, Train Loss: 6.3584
+2024-11-05 03:35:45,719 - Iteration 425, Train Loss: 6.3023
+2024-11-05 03:40:44,355 - Iteration 450, Train Loss: 6.3643
+2024-11-05 03:46:11,970 - Iteration 475, Train Loss: 6.3197
+2024-11-05 03:51:51,687 - Iteration 500, Train Loss: 6.2821
+2024-11-05 03:57:32,528 - Iteration 525, Train Loss: 6.2928
+2024-11-05 04:02:45,993 - Iteration 550, Train Loss: 6.3025
+2024-11-05 04:10:08,966 - Iteration 575, Train Loss: 6.2501
+2024-11-05 04:16:08,390 - Iteration 600, Train Loss: 6.2134
+2024-11-05 04:25:08,999 - Iteration 625, Train Loss: 6.2231
+2024-11-05 04:30:28,422 - Iteration 650, Train Loss: 6.2464
+2024-11-05 04:35:24,461 - Iteration 675, Train Loss: 6.1923
+2024-11-05 04:40:33,110 - Iteration 700, Train Loss: 6.2398
+2024-11-05 04:44:58,684 - Iteration 725, Train Loss: 6.2257
+2024-11-05 04:49:32,174 - Iteration 750, Train Loss: 6.2170
+2024-11-05 04:54:53,972 - Iteration 775, Train Loss: 6.1734
+2024-11-05 04:59:29,826 - Iteration 800, Train Loss: 6.1830
+2024-11-05 05:04:05,042 - Iteration 825, Train Loss: 6.1829
+2024-11-05 05:09:31,842 - Iteration 850, Train Loss: 6.1703
+2024-11-05 05:14:24,644 - Iteration 875, Train Loss: 6.1352
+2024-11-05 05:20:10,526 - Iteration 900, Train Loss: 6.1043
+2024-11-05 05:25:24,505 - Iteration 925, Train Loss: 6.1336
+2024-11-05 05:31:30,354 - Iteration 950, Train Loss: 6.0625
+2024-11-05 05:39:25,508 - Iteration 975, Train Loss: 6.1253
+2024-11-05 05:44:35,072 - Iteration 1000, Train Loss: 6.0985
+2024-11-05 05:49:13,811 - Iteration 1025, Train Loss: 6.0773
+2024-11-05 05:53:46,157 - Iteration 1050, Train Loss: 6.1174
+2024-11-05 05:58:11,048 - Iteration 1075, Train Loss: 6.0692
+2024-11-05 06:02:52,797 - Iteration 1100, Train Loss: 6.0721
+2024-11-05 06:07:29,637 - Iteration 1125, Train Loss: 6.1143
+2024-11-05 06:12:27,685 - Iteration 1150, Train Loss: 6.0763
+2024-11-05 06:17:39,461 - Iteration 1175, Train Loss: 6.0982
+2024-11-05 06:22:30,333 - Iteration 1200, Train Loss: 6.0618
+2024-11-05 06:27:21,035 - Iteration 1225, Train Loss: 6.0315
+2024-11-05 06:32:04,563 - Iteration 1250, Train Loss: 6.0490
+2024-11-05 06:36:33,895 - Iteration 1275, Train Loss: 6.0151
+2024-11-05 06:41:40,893 - Iteration 1300, Train Loss: 6.0636
+2024-11-05 06:46:23,388 - Iteration 1325, Train Loss: 6.0404
+2024-11-05 06:51:01,241 - Iteration 1350, Train Loss: 6.0330
+2024-11-05 06:56:29,191 - Iteration 1375, Train Loss: 6.0067
+2024-11-05 07:01:40,209 - Iteration 1400, Train Loss: 6.0374
+2024-11-05 07:06:18,771 - Iteration 1425, Train Loss: 6.0659
+2024-11-05 07:11:08,498 - Iteration 1450, Train Loss: 6.0957
+2024-11-05 07:16:07,161 - Iteration 1475, Train Loss: 6.0376
+2024-11-05 07:21:31,023 - Iteration 1500, Train Loss: 6.0195
+2024-11-05 07:26:26,891 - Iteration 1525, Train Loss: 5.9868
+2024-11-05 07:31:02,101 - Iteration 1550, Train Loss: 6.0083
+2024-11-05 07:36:39,204 - Iteration 1575, Train Loss: 6.0413
+2024-11-05 07:41:34,726 - Iteration 1600, Train Loss: 5.9562
+2024-11-05 07:46:22,489 - Iteration 1625, Train Loss: 5.9844
+2024-11-05 07:51:29,184 - Iteration 1650, Train Loss: 5.9685
+2024-11-05 07:56:37,246 - Iteration 1675, Train Loss: 5.9874
+2024-11-05 08:01:47,645 - Iteration 1700, Train Loss: 5.9806
+2024-11-05 08:06:38,070 - Iteration 1725, Train Loss: 5.9238
+2024-11-05 08:11:34,664 - Iteration 1750, Train Loss: 5.9629
+2024-11-05 08:17:22,997 - Iteration 1775, Train Loss: 5.9615
+2024-11-05 08:23:01,651 - Iteration 1800, Train Loss: 5.9724
+2024-11-05 08:28:27,768 - Iteration 1825, Train Loss: 5.9586
+2024-11-05 08:33:39,469 - Iteration 1850, Train Loss: 5.9640
+2024-11-05 08:39:16,454 - Iteration 1875, Train Loss: 5.9737
+2024-11-05 08:44:16,580 - Iteration 1900, Train Loss: 5.9491
+2024-11-05 08:49:38,618 - Iteration 1925, Train Loss: 5.9621
+2024-11-05 08:54:51,524 - Iteration 1950, Train Loss: 5.9313
+2024-11-05 08:59:37,310 - Iteration 1975, Train Loss: 5.9482
+2024-11-05 09:05:45,641 - Iteration 2000, Train Loss: 5.9753
+2024-11-05 09:11:32,908 - Iteration 2025, Train Loss: 5.9805
+2024-11-05 09:16:51,646 - Iteration 2050, Train Loss: 5.9460
+2024-11-05 09:21:21,678 - Iteration 2075, Train Loss: 5.9423
+2024-11-05 09:26:13,713 - Iteration 2100, Train Loss: 5.8965
+2024-11-05 09:31:41,453 - Iteration 2125, Train Loss: 5.9684
+2024-11-05 09:36:47,231 - Iteration 2150, Train Loss: 5.8839
+2024-11-05 09:41:47,068 - Iteration 2175, Train Loss: 5.8917
+2024-11-05 09:47:04,888 - Iteration 2200, Train Loss: 5.8774
+2024-11-05 09:52:25,639 - Iteration 2225, Train Loss: 5.9152
+2024-11-05 09:57:50,734 - Iteration 2250, Train Loss: 5.9444
+2024-11-05 10:02:51,323 - Iteration 2275, Train Loss: 5.9084
+2024-11-05 10:07:56,676 - Iteration 2300, Train Loss: 5.9323
+2024-11-05 10:12:46,093 - Iteration 2325, Train Loss: 5.9314
+2024-11-05 10:17:19,212 - Iteration 2350, Train Loss: 5.9092
+2024-11-05 10:22:15,353 - Iteration 2375, Train Loss: 5.9312
+2024-11-05 10:27:18,072 - Iteration 2400, Train Loss: 5.9441
+2024-11-05 10:32:09,823 - Iteration 2425, Train Loss: 5.9145
+2024-11-05 10:36:41,285 - Iteration 2450, Train Loss: 5.9277
+2024-11-05 10:41:44,508 - Iteration 2475, Train Loss: 5.9132
+2024-11-05 10:46:59,945 - Iteration 2500, Train Loss: 5.9025
+2024-11-05 10:51:48,981 - Iteration 2525, Train Loss: 5.8679
+2024-11-05 10:57:32,035 - Iteration 2550, Train Loss: 5.9217
+2024-11-05 11:02:24,174 - Iteration 2575, Train Loss: 5.8841
+2024-11-05 11:07:16,596 - Iteration 2600, Train Loss: 5.9175
+2024-11-05 11:12:44,879 - Iteration 2625, Train Loss: 5.9169
+2024-11-05 11:17:31,573 - Iteration 2650, Train Loss: 5.9463
+2024-11-05 11:23:23,360 - Iteration 2675, Train Loss: 5.8878
+2024-11-05 11:28:25,387 - Iteration 2700, Train Loss: 5.9171
+2024-11-05 11:34:10,949 - Iteration 2725, Train Loss: 5.9243
+2024-11-05 11:39:36,579 - Iteration 2750, Train Loss: 5.8682
+2024-11-05 11:44:07,716 - Iteration 2775, Train Loss: 5.8570
+2024-11-05 11:49:36,638 - Iteration 2800, Train Loss: 5.8574
+2024-11-05 11:54:47,226 - Iteration 2825, Train Loss: 5.9198
+2024-11-05 12:00:23,443 - Iteration 2850, Train Loss: 5.8792
+2024-11-05 12:05:15,358 - Iteration 2875, Train Loss: 5.8583
+2024-11-05 12:10:52,360 - Iteration 2900, Train Loss: 5.8577
+2024-11-05 12:15:46,616 - Iteration 2925, Train Loss: 5.8623
+2024-11-06 04:38:44,232 - Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-06 04:38:44,236 - Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2024-11-06 04:38:44,237 - NumExpr defaulting to 16 threads.
+2024-11-06 04:38:52,879 - Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-06 04:38:52,880 - Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2024-11-06 04:38:52,880 - NumExpr defaulting to 16 threads.
+2024-11-06 04:39:12,866 - Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-06 04:39:12,866 - Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2024-11-06 04:39:12,866 - NumExpr defaulting to 16 threads.
+2024-11-06 04:39:28,944 - Running on: cuda
+2024-11-06 04:39:32,059 - Pre-trained weights not found. Training from scratch.
+2024-11-06 04:39:50,293 - Iteration 0, Train Loss: 6.9303
+2024-11-06 04:45:21,206 - Iteration 25, Train Loss: 6.9252
+2024-11-06 04:51:08,873 - Iteration 50, Train Loss: 6.8988
+2024-11-06 04:56:18,671 - Iteration 75, Train Loss: 6.8755
+2024-11-06 05:00:50,284 - Iteration 100, Train Loss: 6.8589
+2024-11-06 05:05:19,013 - Iteration 125, Train Loss: 6.7939
+2024-11-06 05:09:22,936 - Iteration 150, Train Loss: 6.6811
+2024-11-06 05:13:25,924 - Iteration 175, Train Loss: 6.6775
+2024-11-06 05:17:22,005 - Iteration 200, Train Loss: 6.5886
+2024-11-06 05:21:22,431 - Iteration 225, Train Loss: 6.5404
+2024-11-06 05:25:28,664 - Iteration 250, Train Loss: 6.5018
+2024-11-06 05:26:38,757 - Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2024-11-06 05:26:38,761 - NumExpr defaulting to 16 threads.
+2024-11-06 05:26:59,210 - Running on: cuda
+2024-11-06 05:27:02,957 - Pre-trained weights not found. Training from scratch.
+2024-11-06 05:27:24,199 - Iteration 0, Train Loss: 6.9303
+2024-11-06 05:29:50,182 - Iteration 275, Train Loss: 6.4744
+2024-11-06 05:32:41,266 - Iteration 25, Train Loss: 6.9252
+2024-11-06 05:34:03,376 - Iteration 300, Train Loss: 6.4849
+2024-11-06 05:38:11,098 - Iteration 325, Train Loss: 6.4117
+2024-11-06 05:38:11,178 - Iteration 50, Train Loss: 6.8986
+2024-11-06 05:40:09,405 - Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-06 05:40:09,408 - Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2024-11-06 05:40:09,409 - NumExpr defaulting to 16 threads.
+2024-11-06 05:40:44,060 - Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-06 05:40:44,090 - Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2024-11-06 05:40:44,140 - NumExpr defaulting to 16 threads.
+2024-11-06 05:40:46,531 - Running on: cuda
+2024-11-06 05:40:47,418 - Pre-trained weights not found. Training from scratch.
+2024-11-06 05:41:02,291 - Iteration 0, Train Loss: 6.9304
+2024-11-06 05:42:54,343 - Iteration 350, Train Loss: 6.3975
+2024-11-06 05:43:45,748 - Iteration 75, Train Loss: 6.8758
+2024-11-06 05:45:18,624 - Iteration 25, Train Loss: 6.9283
+2024-11-06 05:47:12,809 - Iteration 375, Train Loss: 6.3810
+2024-11-06 05:49:13,710 - Iteration 100, Train Loss: 6.8588
+2024-11-06 05:49:52,483 - Iteration 50, Train Loss: 6.8990
+2024-11-06 05:53:00,835 - Iteration 400, Train Loss: 6.3627
+2024-11-06 05:54:37,443 - Iteration 75, Train Loss: 6.8612
+2024-11-06 05:54:40,118 - Iteration 125, Train Loss: 6.7932
+2024-11-06 05:57:35,398 - Iteration 425, Train Loss: 6.3045
+2024-11-06 05:58:47,203 - Iteration 100, Train Loss: 6.8615
+2024-11-06 06:00:00,165 - Iteration 150, Train Loss: 6.6816
+2024-11-06 06:02:16,767 - Iteration 450, Train Loss: 6.3652
+2024-11-06 06:02:52,104 - Iteration 125, Train Loss: 6.7240
+2024-11-06 06:05:20,613 - Iteration 175, Train Loss: 6.6790
+2024-11-06 06:06:57,040 - Iteration 475, Train Loss: 6.3197
+2024-11-06 06:07:04,744 - Iteration 150, Train Loss: 6.6434
+2024-11-06 06:10:30,177 - Iteration 200, Train Loss: 6.5845
+2024-11-06 06:11:02,909 - Iteration 175, Train Loss: 6.6203
+2024-11-06 06:11:45,025 - Iteration 500, Train Loss: 6.2865
+2024-11-06 06:15:07,400 - Iteration 200, Train Loss: 6.5198
+2024-11-06 06:16:39,731 - Iteration 225, Train Loss: 6.5347
+2024-11-06 06:17:16,547 - Iteration 525, Train Loss: 6.3014
+2024-11-06 06:19:36,166 - Iteration 225, Train Loss: 6.5040
+2024-11-06 06:21:35,823 - Iteration 550, Train Loss: 6.3054
+2024-11-06 06:22:30,570 - Iteration 250, Train Loss: 6.5056
+2024-11-06 06:23:57,982 - Iteration 250, Train Loss: 6.4799
+2024-11-06 06:27:11,179 - Iteration 575, Train Loss: 6.2564
+2024-11-06 06:28:08,823 - Iteration 275, Train Loss: 6.4165
+2024-11-06 06:28:10,718 - Iteration 275, Train Loss: 6.4735
+2024-11-06 06:32:17,144 - Iteration 600, Train Loss: 6.2221
+2024-11-06 06:32:19,219 - Iteration 300, Train Loss: 6.4281
+2024-11-06 06:33:36,247 - Iteration 300, Train Loss: 6.4802
+2024-11-06 06:36:28,089 - Iteration 325, Train Loss: 6.3271
+2024-11-06 06:38:16,003 - Iteration 625, Train Loss: 6.2266
+2024-11-06 06:39:18,131 - Iteration 325, Train Loss: 6.4082
+2024-11-06 06:40:39,634 - Iteration 350, Train Loss: 6.3614
+2024-11-06 06:43:12,752 - Iteration 650, Train Loss: 6.2522
+2024-11-06 06:44:59,494 - Iteration 375, Train Loss: 6.2668
+2024-11-06 06:45:00,666 - Iteration 350, Train Loss: 6.3963
+2024-11-06 06:48:41,944 - Iteration 675, Train Loss: 6.1953
+2024-11-06 06:49:13,589 - Iteration 400, Train Loss: 6.2607
+2024-11-06 06:51:16,233 - Iteration 375, Train Loss: 6.3789
+2024-11-06 06:54:48,163 - Iteration 700, Train Loss: 6.2421
+2024-11-06 06:57:12,358 - Iteration 400, Train Loss: 6.3624
+2024-11-06 06:59:08,384 - Model saved at epoch 0
+2024-11-06 06:59:08,387 - Epoch 0, Validation Loss: 6.2689
+2024-11-06 06:59:08,395 - Epoch 0, Cosine LR Decay: 0.000010
+2024-11-06 07:00:20,563 - Iteration 425, Train Loss: 6.2572
+2024-11-06 07:00:28,535 - Iteration 725, Train Loss: 6.2272
+2024-11-06 07:02:52,215 - Iteration 450, Train Loss: 6.2360
+2024-11-06 07:02:57,418 - Iteration 425, Train Loss: 6.2971
+2024-11-06 07:05:27,656 - Iteration 475, Train Loss: 6.2430
+2024-11-06 07:05:36,802 - Iteration 750, Train Loss: 6.2223
+2024-11-06 07:07:59,618 - Iteration 500, Train Loss: 6.1724
+2024-11-06 07:09:44,848 - Iteration 450, Train Loss: 6.3721
+2024-11-06 07:10:26,516 - Iteration 525, Train Loss: 6.2788
+2024-11-06 07:12:54,994 - Iteration 775, Train Loss: 6.1784
+2024-11-06 07:13:08,302 - Iteration 550, Train Loss: 6.2152
+2024-11-06 07:15:39,903 - Iteration 475, Train Loss: 6.3154
+2024-11-06 07:15:42,308 - Iteration 575, Train Loss: 6.1892
+2024-11-06 07:18:21,380 - Iteration 600, Train Loss: 6.2079
+2024-11-06 07:20:53,794 - Iteration 625, Train Loss: 6.1540
+2024-11-06 07:22:09,918 - Iteration 500, Train Loss: 6.2826
+2024-11-06 07:23:26,922 - Iteration 650, Train Loss: 6.1356
+2024-11-06 07:25:33,291 - Iteration 800, Train Loss: 6.1857
+2024-11-06 07:25:56,307 - Iteration 675, Train Loss: 6.1519
+2024-11-06 07:28:19,079 - Iteration 525, Train Loss: 6.2950
+2024-11-06 07:28:26,351 - Iteration 700, Train Loss: 6.1734
+2024-11-06 07:30:59,892 - Iteration 725, Train Loss: 6.0921
+2024-11-06 07:33:30,942 - Iteration 750, Train Loss: 6.1112
+2024-11-06 07:33:50,359 - Iteration 550, Train Loss: 6.3018
+2024-11-06 07:33:52,484 - Iteration 825, Train Loss: 6.1829
+2024-11-06 07:35:57,796 - Iteration 775, Train Loss: 6.1963
+2024-11-06 07:38:28,131 - Iteration 800, Train Loss: 6.1303
+2024-11-06 07:39:24,152 - Iteration 575, Train Loss: 6.2550
+2024-11-06 07:40:01,456 - Iteration 850, Train Loss: 6.1730
+2024-11-06 07:41:22,367 - Iteration 825, Train Loss: 6.1399
+2024-11-06 07:44:51,607 - Iteration 600, Train Loss: 6.2160
+2024-11-06 07:46:17,637 - Model saved at epoch 1
+2024-11-06 07:46:17,639 - Epoch 1, Validation Loss: 6.1101
+2024-11-06 07:46:17,642 - Epoch 1, Cosine LR Decay: 0.000010
+2024-11-06 07:47:45,133 - Iteration 875, Train Loss: 6.1367
+2024-11-06 07:48:36,901 - Iteration 850, Train Loss: 6.0947
+2024-11-06 07:50:31,520 - Iteration 625, Train Loss: 6.2274
+2024-11-06 07:51:13,990 - Iteration 875, Train Loss: 6.0984
+2024-11-06 07:54:01,172 - Iteration 900, Train Loss: 6.0838
+2024-11-06 07:56:31,674 - Iteration 925, Train Loss: 6.0593
+2024-11-06 07:56:43,686 - Iteration 900, Train Loss: 6.1023
+2024-11-06 07:56:47,501 - Iteration 650, Train Loss: 6.2490
+2024-11-06 07:59:03,209 - Iteration 950, Train Loss: 6.0420
+2024-11-06 08:01:34,182 - Iteration 975, Train Loss: 6.0571
+2024-11-06 08:02:54,557 - Iteration 675, Train Loss: 6.1918
+2024-11-06 08:04:04,491 - Iteration 1000, Train Loss: 6.0574
+2024-11-06 08:06:36,592 - Iteration 1025, Train Loss: 6.0927
+2024-11-06 08:07:42,499 - Iteration 925, Train Loss: 6.1360
+2024-11-06 08:09:07,787 - Iteration 700, Train Loss: 6.2361
+2024-11-06 08:09:11,254 - Iteration 1050, Train Loss: 6.0608
+2024-11-06 08:11:43,359 - Iteration 1075, Train Loss: 6.0810
+2024-11-06 08:14:16,302 - Iteration 1100, Train Loss: 6.0710
+2024-11-06 08:15:05,383 - Iteration 725, Train Loss: 6.2257
+2024-11-06 08:16:46,028 - Iteration 1125, Train Loss: 5.9966
+2024-11-06 08:19:30,238 - Iteration 1150, Train Loss: 6.0112
+2024-11-06 08:19:38,943 - Iteration 950, Train Loss: 6.0626
+2024-11-06 08:21:35,247 - Iteration 750, Train Loss: 6.2203
+2024-11-06 08:22:07,631 - Iteration 1175, Train Loss: 6.0039
+2024-11-06 08:24:44,300 - Iteration 1200, Train Loss: 6.0462
+2024-11-06 08:27:15,338 - Iteration 775, Train Loss: 6.1717
+2024-11-06 08:27:17,699 - Iteration 1225, Train Loss: 5.9738
+2024-11-06 08:29:18,345 - Iteration 975, Train Loss: 6.1247
+2024-11-06 08:33:16,172 - Iteration 800, Train Loss: 6.1844
+2024-11-06 08:33:36,550 - Model saved at epoch 2
+2024-11-06 08:33:36,588 - Epoch 2, Validation Loss: 6.0046
+2024-11-06 08:33:36,590 - Epoch 2, Cosine LR Decay: 0.000010
+2024-11-06 08:34:34,475 - Iteration 1250, Train Loss: 6.0086
+2024-11-06 08:37:05,376 - Iteration 1000, Train Loss: 6.0984
+2024-11-06 08:37:18,917 - Iteration 1275, Train Loss: 6.0063
+2024-11-06 08:39:55,420 - Iteration 1300, Train Loss: 6.0009
+2024-11-06 08:42:56,257 - Iteration 1325, Train Loss: 6.0032
+2024-11-06 08:45:54,534 - Iteration 1350, Train Loss: 5.9985
+2024-11-06 08:46:26,137 - Iteration 1025, Train Loss: 6.0766
+2024-11-06 08:48:40,984 - Iteration 1375, Train Loss: 5.9452
+2024-11-06 08:51:31,455 - Iteration 1400, Train Loss: 5.9852
+2024-11-06 08:54:17,698 - Iteration 1425, Train Loss: 5.9531
+2024-11-06 08:57:13,399 - Iteration 1450, Train Loss: 5.9839
+2024-11-06 09:00:05,242 - Iteration 1050, Train Loss: 6.1160
+2024-11-06 09:00:10,161 - Iteration 1475, Train Loss: 5.9530
+2024-11-06 09:03:02,460 - Iteration 1500, Train Loss: 6.0371
+2024-11-06 09:06:16,234 - Iteration 1525, Train Loss: 5.9776
+2024-11-06 09:09:17,573 - Iteration 1550, Train Loss: 5.9721
+2024-11-06 09:10:56,694 - Iteration 1075, Train Loss: 6.0758
+2024-11-06 09:12:19,069 - Iteration 1575, Train Loss: 5.9640
+2024-11-06 09:15:17,015 - Iteration 1600, Train Loss: 5.9980
+2024-11-06 09:18:13,736 - Iteration 1625, Train Loss: 5.9613
+2024-11-06 09:18:14,579 - Iteration 1100, Train Loss: 6.0769
+2024-11-06 09:21:14,194 - Iteration 1650, Train Loss: 5.9324
+2024-11-06 09:25:07,330 - Iteration 1125, Train Loss: 6.1118
+2024-11-06 09:27:09,454 - Model saved at epoch 3
+2024-11-06 09:27:09,457 - Epoch 3, Validation Loss: 5.9582
+2024-11-06 09:27:09,457 - Epoch 3, Cosine LR Decay: 0.000010
+2024-11-06 09:29:40,378 - Iteration 1675, Train Loss: 5.9321
+2024-11-06 09:32:35,939 - Iteration 1700, Train Loss: 5.9983
+2024-11-06 09:35:32,080 - Iteration 1725, Train Loss: 5.9720
+2024-11-06 09:36:11,859 - Iteration 1150, Train Loss: 6.0770
+2024-11-06 09:38:26,573 - Iteration 1750, Train Loss: 6.0003
+2024-11-06 09:41:17,438 - Iteration 1775, Train Loss: 5.9660
+2024-11-06 09:44:04,106 - Iteration 1800, Train Loss: 5.9116
+2024-11-06 09:46:48,406 - Iteration 1825, Train Loss: 5.9308
+2024-11-06 09:48:23,107 - Iteration 1175, Train Loss: 6.0909
+2024-11-06 09:49:45,790 - Iteration 1850, Train Loss: 5.9328
+2024-11-06 09:52:31,281 - Iteration 1875, Train Loss: 5.9361
+2024-11-06 09:55:17,983 - Iteration 1900, Train Loss: 5.9321
+2024-11-06 09:55:23,776 - Iteration 1200, Train Loss: 6.0587
+2024-11-06 09:58:09,645 - Iteration 1925, Train Loss: 5.9553
+2024-11-06 10:00:48,341 - Iteration 1950, Train Loss: 5.8891
+2024-11-06 10:01:56,916 - Iteration 1225, Train Loss: 6.0255
+2024-11-06 10:03:34,910 - Iteration 1975, Train Loss: 5.8956
+2024-11-06 10:06:29,208 - Iteration 2000, Train Loss: 5.9372
+2024-11-06 10:09:15,720 - Iteration 2025, Train Loss: 5.9029
+2024-11-06 10:11:16,940 - Iteration 1250, Train Loss: 6.0476
+2024-11-06 10:12:05,726 - Iteration 2050, Train Loss: 5.9543
+2024-11-06 10:20:43,573 - Model saved at epoch 4
+2024-11-06 10:20:43,574 - Epoch 4, Validation Loss: 5.9166
+2024-11-06 10:20:43,574 - Epoch 4, Cosine LR Decay: 0.000010
+2024-11-06 10:21:23,463 - Iteration 2075, Train Loss: 5.9403
+2024-11-06 10:21:52,992 - Iteration 1275, Train Loss: 6.0050
+2024-11-06 10:23:56,518 - Iteration 2100, Train Loss: 5.8851
+2024-11-06 10:26:31,175 - Iteration 2125, Train Loss: 5.9511
+2024-11-06 10:29:07,922 - Iteration 1300, Train Loss: 6.0540
+2024-11-06 10:29:08,813 - Iteration 2150, Train Loss: 5.9310
+2024-11-06 10:31:45,653 - Iteration 2175, Train Loss: 5.8702
+2024-11-06 10:34:18,030 - Iteration 2200, Train Loss: 5.8856
+2024-11-06 10:35:49,209 - Iteration 1325, Train Loss: 6.0422
+2024-11-06 10:36:56,037 - Iteration 2225, Train Loss: 5.8955
+2024-11-06 10:39:34,836 - Iteration 2250, Train Loss: 5.9241
+2024-11-06 10:42:16,814 - Iteration 2275, Train Loss: 5.9536
+2024-11-06 10:44:43,738 - Iteration 2300, Train Loss: 5.8930
+2024-11-06 10:46:46,489 - Iteration 1350, Train Loss: 6.0259
+2024-11-06 10:47:23,505 - Iteration 2325, Train Loss: 5.8912
+2024-11-06 10:50:01,293 - Iteration 2350, Train Loss: 5.9167
+2024-11-06 10:52:44,199 - Iteration 2375, Train Loss: 5.9286
+2024-11-06 10:55:22,355 - Iteration 2400, Train Loss: 5.9034
+2024-11-06 10:56:32,068 - Iteration 1375, Train Loss: 5.9988
+2024-11-06 10:58:13,103 - Iteration 2425, Train Loss: 5.8843
+2024-11-06 11:00:46,854 - Iteration 2450, Train Loss: 5.9361
+2024-11-06 11:03:36,137 - Iteration 2475, Train Loss: 5.8867
+2024-11-06 11:05:36,889 - Iteration 1400, Train Loss: 6.0287
+2024-11-06 11:09:03,338 - Model saved at epoch 5
+2024-11-06 11:09:03,338 - Epoch 5, Validation Loss: 5.8995
+2024-11-06 11:09:03,338 - Epoch 5, Cosine LR Decay: 0.000010
+2024-11-06 11:10:43,231 - Iteration 1425, Train Loss: 6.0550
+2024-11-06 11:10:52,095 - Iteration 2500, Train Loss: 5.9003
+2024-11-06 11:13:19,197 - Iteration 2525, Train Loss: 5.8948
+2024-11-06 11:15:56,425 - Iteration 2550, Train Loss: 5.8879
+2024-11-06 11:18:35,765 - Iteration 2575, Train Loss: 5.8796
+2024-11-06 11:21:03,407 - Iteration 2600, Train Loss: 5.8947
+2024-11-06 11:23:17,825 - Iteration 1450, Train Loss: 6.0846
+2024-11-06 11:23:35,034 - Iteration 2625, Train Loss: 5.9061
+2024-11-06 11:26:26,309 - Iteration 2650, Train Loss: 5.9098
+2024-11-06 11:29:06,511 - Iteration 2675, Train Loss: 5.8742
+2024-11-06 11:31:50,116 - Iteration 2700, Train Loss: 5.9123
+2024-11-06 11:34:26,580 - Iteration 2725, Train Loss: 5.8672
+2024-11-06 11:36:25,670 - Iteration 1475, Train Loss: 6.0242
+2024-11-06 11:36:58,803 - Iteration 2750, Train Loss: 5.9143
+2024-11-06 11:39:32,194 - Iteration 2775, Train Loss: 5.8633
+2024-11-06 11:42:21,626 - Iteration 2800, Train Loss: 5.8525
+2024-11-06 11:44:58,789 - Iteration 2825, Train Loss: 5.8508
+2024-11-06 11:47:32,764 - Iteration 2850, Train Loss: 5.8720
+2024-11-06 11:47:41,728 - Iteration 1500, Train Loss: 6.0160
+2024-11-06 11:50:13,044 - Iteration 2875, Train Loss: 5.8551
+2024-11-06 11:57:26,328 - Model saved at epoch 6
+2024-11-06 11:57:26,328 - Epoch 6, Validation Loss: 5.8823
+2024-11-06 11:57:26,328 - Epoch 6, Cosine LR Decay: 0.000010
+2024-11-06 11:57:45,215 - Iteration 2900, Train Loss: 5.9297
+2024-11-06 11:59:14,131 - Iteration 1525, Train Loss: 5.9829
+2024-11-06 12:00:31,714 - Iteration 2925, Train Loss: 5.8881
+2024-11-06 12:03:25,255 - Iteration 2950, Train Loss: 5.8337
+2024-11-06 12:06:03,016 - Iteration 2975, Train Loss: 5.8523
+2024-11-06 12:06:32,170 - Iteration 1550, Train Loss: 5.9979
+2024-11-06 12:08:49,416 - Iteration 3000, Train Loss: 5.8718
+2024-11-06 12:11:29,661 - Iteration 3025, Train Loss: 5.8871
+2024-11-06 12:14:21,761 - Iteration 3050, Train Loss: 5.8659
+2024-11-06 12:14:31,766 - Iteration 1575, Train Loss: 6.0383
+2024-11-06 12:17:07,122 - Iteration 3075, Train Loss: 5.8632
+2024-11-06 12:20:03,629 - Iteration 3100, Train Loss: 5.8558
+2024-11-06 12:23:01,624 - Iteration 3125, Train Loss: 5.8682
+2024-11-06 12:25:45,854 - Iteration 3150, Train Loss: 5.8510
+2024-11-06 12:28:41,615 - Iteration 3175, Train Loss: 5.8977
+2024-11-06 12:29:19,397 - Iteration 1600, Train Loss: 5.9529
+2024-11-06 12:31:38,540 - Iteration 3200, Train Loss: 5.8121
+2024-11-06 12:34:33,991 - Iteration 3225, Train Loss: 5.8279
+2024-11-06 12:37:32,554 - Iteration 3250, Train Loss: 5.8453
+2024-11-06 12:39:56,635 - Iteration 1625, Train Loss: 5.9836
+2024-11-06 12:40:20,640 - Iteration 3275, Train Loss: 5.8603
+2024-11-06 12:43:07,269 - Iteration 3300, Train Loss: 5.8566
+2024-11-06 12:47:38,838 - Iteration 1650, Train Loss: 5.9635
+2024-11-06 12:49:37,329 - Model saved at epoch 7
+2024-11-06 12:49:37,329 - Epoch 7, Validation Loss: 5.8586
+2024-11-06 12:49:37,329 - Epoch 7, Cosine LR Decay: 0.000010
+2024-11-06 12:51:07,368 - Iteration 3325, Train Loss: 5.8583
+2024-11-06 12:53:51,015 - Iteration 3350, Train Loss: 5.8544
+2024-11-06 12:56:43,078 - Iteration 3375, Train Loss: 5.8536
+2024-11-06 12:59:46,086 - Iteration 3400, Train Loss: 5.8524
+2024-11-06 13:00:26,292 - Iteration 1675, Train Loss: 5.9858
+2024-11-06 13:02:34,796 - Iteration 3425, Train Loss: 5.8763
+2024-11-06 13:05:18,550 - Iteration 3450, Train Loss: 5.8354
+2024-11-06 13:08:10,355 - Iteration 3475, Train Loss: 5.9114
+2024-11-06 13:09:59,845 - Iteration 1700, Train Loss: 5.9690
+2024-11-06 13:11:02,888 - Iteration 3500, Train Loss: 5.8371
+2024-11-06 13:13:44,890 - Iteration 3525, Train Loss: 5.8414
+2024-11-06 13:16:42,006 - Iteration 3550, Train Loss: 5.8231
+2024-11-06 13:19:26,677 - Iteration 3575, Train Loss: 5.8200
+2024-11-06 13:19:31,930 - Iteration 1725, Train Loss: 5.9113
+2024-11-06 13:22:12,989 - Iteration 3600, Train Loss: 5.8589
+2024-11-06 13:24:57,782 - Iteration 3625, Train Loss: 5.8529
+2024-11-06 13:27:41,749 - Iteration 3650, Train Loss: 5.8440
+2024-11-06 13:27:58,191 - Iteration 1750, Train Loss: 5.9607
+2024-11-06 13:31:10,196 - Iteration 3675, Train Loss: 5.8731
+2024-11-06 13:33:53,930 - Iteration 3700, Train Loss: 5.8940
+2024-11-06 13:35:58,516 - Iteration 1775, Train Loss: 5.9584
+2024-11-06 13:40:43,201 - Iteration 1800, Train Loss: 5.9750
+2024-11-06 13:44:55,779 - Iteration 1825, Train Loss: 5.9515
+2024-11-06 13:49:11,337 - Iteration 1850, Train Loss: 5.9593
+2024-11-06 13:52:59,811 - Iteration 1875, Train Loss: 5.9683
+2024-11-06 13:56:48,990 - Iteration 1900, Train Loss: 5.9463
+2024-11-06 14:01:11,139 - Iteration 1925, Train Loss: 5.9615
+2024-11-06 14:05:26,038 - Iteration 1950, Train Loss: 5.9300
+2024-11-06 14:09:59,390 - Iteration 1975, Train Loss: 5.9435
+2024-11-06 14:14:07,975 - Iteration 2000, Train Loss: 5.9713
+2024-11-06 14:18:02,946 - Iteration 2025, Train Loss: 5.9757
+2024-11-06 14:22:19,911 - Iteration 2050, Train Loss: 5.9411
+2024-11-06 14:26:10,794 - Iteration 2075, Train Loss: 5.9390
+2024-11-06 14:30:11,683 - Iteration 2100, Train Loss: 5.8924
+2024-11-06 14:33:56,138 - Iteration 2125, Train Loss: 5.9636
+2024-11-06 14:37:54,713 - Iteration 2150, Train Loss: 5.8813
+2024-11-06 14:41:40,155 - Iteration 2175, Train Loss: 5.8898
+2024-11-06 14:45:40,406 - Iteration 2200, Train Loss: 5.8725
+2024-11-06 14:50:16,469 - Iteration 2225, Train Loss: 5.9123
+2024-11-06 14:54:47,777 - Iteration 2250, Train Loss: 5.9386
+2024-11-06 14:58:52,250 - Iteration 2275, Train Loss: 5.9029
+2024-11-06 15:02:55,300 - Iteration 2300, Train Loss: 5.9276
+2024-11-06 15:07:00,934 - Iteration 2325, Train Loss: 5.9243
+2024-11-06 15:11:17,913 - Iteration 2350, Train Loss: 5.9077
+2024-11-06 15:15:30,216 - Iteration 2375, Train Loss: 5.9241
+2024-11-06 15:20:05,143 - Iteration 2400, Train Loss: 5.9363
+2024-11-06 15:24:13,097 - Iteration 2425, Train Loss: 5.9069
+2024-11-06 15:28:07,837 - Iteration 2450, Train Loss: 5.9232
+2024-11-06 15:32:22,788 - Iteration 2475, Train Loss: 5.9100
+2024-11-06 15:36:12,581 - Iteration 2500, Train Loss: 5.8928
+2024-11-06 15:40:48,369 - Iteration 2525, Train Loss: 5.8625
+2024-11-06 15:45:23,588 - Iteration 2550, Train Loss: 5.9153
+2024-11-06 15:49:34,131 - Iteration 2575, Train Loss: 5.8781
+2024-11-06 15:53:37,411 - Iteration 2600, Train Loss: 5.9143
+2024-11-06 15:57:38,240 - Iteration 2625, Train Loss: 5.9127
+2024-11-06 16:01:50,115 - Iteration 2650, Train Loss: 5.9378
+2024-11-06 16:05:35,040 - Iteration 2675, Train Loss: 5.8804
+2024-11-06 16:09:45,823 - Iteration 2700, Train Loss: 5.9181
+2024-11-06 16:13:47,793 - Iteration 2725, Train Loss: 5.9259
+2024-11-06 16:17:59,821 - Iteration 2750, Train Loss: 5.8607
+2024-11-06 16:22:22,609 - Iteration 2775, Train Loss: 5.8594
+2024-11-06 16:26:35,242 - Iteration 2800, Train Loss: 5.8517
+2024-11-06 16:30:58,210 - Iteration 2825, Train Loss: 5.9151
+2024-11-06 16:35:08,728 - Iteration 2850, Train Loss: 5.8740
