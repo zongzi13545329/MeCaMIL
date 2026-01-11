@@ -28,7 +28,7 @@ class IClassifier(nn.Module):
 
 
 class CausalGraphAttention(nn.Module):
-    """图注意力层，用于建模因果关系"""
+    """Graph attention layer for causal relationship modeling"""
     def __init__(self, in_dim, out_dim, num_heads=2):
         super().__init__()
         self.num_heads = num_heads
@@ -42,7 +42,7 @@ class CausalGraphAttention(nn.Module):
     def forward(self, x, adjacency_mask):
         """
         x: [batch, num_nodes, in_dim]
-        adjacency_mask: [num_nodes, num_nodes] - 因果图的邻接矩阵
+        adjacency_mask: [num_nodes, num_nodes] - adjacency matrix of causal graph
         """
         B, N, _ = x.shape
         
@@ -52,7 +52,7 @@ class CausalGraphAttention(nn.Module):
         
         attn = (q @ k.transpose(-2, -1)) / (self.head_dim ** 0.5)
         
-        # 应用因果图的结构约束
+        # Apply structural constraints from causal graph
         adjacency_mask = adjacency_mask.unsqueeze(0).unsqueeze(0)  # [1, 1, N, N]
         attn = attn.masked_fill(adjacency_mask == 0, float('-inf'))
         
@@ -64,7 +64,7 @@ class CausalGraphAttention(nn.Module):
 
 
 class StructuralEquationModel(nn.Module):
-    """改进的结构方程模型，使用图神经网络"""
+    """Structural equation model with graph neural networks"""
     def __init__(self, x_dim, u_dim, hidden_dim=256, depth=1, use_graph=True):
         super().__init__()
         self.x_dim = x_dim
@@ -73,11 +73,11 @@ class StructuralEquationModel(nn.Module):
         self.depth = depth
         self.use_graph = use_graph
         
-        # 定义因果图结构: X -> Z <- U, Z -> Y
-        # 节点索引: 0=X, 1=U, 2=Z
+        # Causal graph structure: X -> Z <- U, Z -> Y
+        # Node indices: 0=X, 1=U, 2=Z
         self.register_buffer('causal_adjacency', self._build_causal_graph())
         
-        # 节点嵌入层
+        # Node embedding layers
         self.node_embeddings = nn.ModuleDict({
             'x_embed': nn.Sequential(
                 nn.Linear(x_dim, hidden_dim),
@@ -95,66 +95,59 @@ class StructuralEquationModel(nn.Module):
                 nn.GELU(),
                 nn.Dropout(0.3)
             ),
-            'z_init': nn.Linear(1, hidden_dim)  # Z的初始化
+            'z_init': nn.Linear(1, hidden_dim)  # Z initialization
         })
         
         if use_graph:
-            # 使用图注意力网络建模因果传播
+            # Graph attention network for causal propagation
             self.graph_layers = nn.ModuleList([
                 CausalGraphAttention(hidden_dim, hidden_dim, num_heads=4)
                 for _ in range(depth)
             ])
         else:
-            # 回退到简单的结构方程（用于消融实验）
+            # Fallback to simple structural equations (for ablation)
             self.structural_equations = nn.ModuleDict({
                 'x_to_z': nn.Linear(hidden_dim, hidden_dim),
                 'u_to_z': nn.Linear(hidden_dim, hidden_dim),
                 'combine': nn.Linear(hidden_dim * 2, hidden_dim)
             })
         
-        # 用于do-intervention的可学习干预向量
+        # Learnable intervention vectors for do-intervention
         self.intervention_vectors = nn.ParameterDict({
             'u_intervention': nn.Parameter(torch.randn(1, hidden_dim))
         })
         
     def _build_causal_graph(self):
-        """构建因果图的邻接矩阵"""
+        """Construct adjacency matrix of causal graph"""
         adjacency = torch.zeros(3, 3)
         
-        # === 因果边（保持方向性）===
-        adjacency[0, 2] = 1  # X → Z
-        adjacency[1, 2] = 1  # U → Z
-        
-        # === 允许双向传播（关键修改）===
-        adjacency[2, 0] = 1  # Z → X（允许反向传播信息）
+        # Allow bidirectional propagation
+        adjacency[2, 0] = 1  # Z → X (allow backward information flow)
         adjacency[2, 1] = 1  # Z → U
         
-        # === 自环（必须保留）===
-        adjacency[0, 0] = 1  # X自环
-        adjacency[1, 1] = 1  # U自环
-        adjacency[2, 2] = 1  # Z自环
+        # Self-loops (must be retained)
+        adjacency[0, 0] = 1  # X self-loop
+        adjacency[1, 1] = 1  # U self-loop
+        adjacency[2, 2] = 1  # Z self-loop
         
         return adjacency
     
     def contrastive_loss(self, x_embed, u_embed, temperature=0.5):
-        """
-        确保X和U的表示空间相对独立（因为它们是外生变量）
-        """
-        # 归一化
+        """Ensure X and U representations are relatively independent (as exogenous variables)"""
+        # Normalization
         x_norm = F.normalize(x_embed, dim=-1)
         u_norm = F.normalize(u_embed, dim=-1)
         
-        # 余弦相似度
+        # Cosine similarity
         similarity = torch.mm(x_norm, u_norm.t()) / temperature
         
-        # 希望X和U不要太相似（因为它们应该独立）
-        # 目标：最小化相似度
+        # Minimize similarity between X and U
         loss = torch.mean(torch.exp(similarity))
         
         return loss
     
     def handle_missing_demographics(self, x, u):
-        """处理缺失的人口统计学数据"""
+        """Handle missing demographic data"""
         if u is None:
             return torch.zeros(x.size(0), self.u_dim, device=x.device), 0.0
             
@@ -170,10 +163,10 @@ class StructuralEquationModel(nn.Module):
         return u, uncertainty
 
     def forward_graph(self, x, u=None):
-        """使用图神经网络的因果传播"""
+        """Causal propagation using graph neural networks"""
         batch_size = x.size(0)
         
-        # 准备节点特征
+        # Prepare node features
         x_embed = self.node_embeddings['x_embed'](x)
         
         if u is not None:
@@ -182,24 +175,24 @@ class StructuralEquationModel(nn.Module):
         else:
             u_embed = torch.zeros(batch_size, self.hidden_dim, device=x.device)
         
-        # Z初始化为零向量（Z是collider，由X和U决定）
+        # Initialize Z as zero vector (Z is collider, determined by X and U)
         z_embed = self.node_embeddings['z_init'](torch.zeros(batch_size, 1, device=x.device))
         
-        # 构建节点特征矩阵 [batch, 3, hidden_dim]
+        # Construct node feature matrix [batch, 3, hidden_dim]
         nodes = torch.stack([x_embed, u_embed, z_embed], dim=1)
         
-        # 通过图注意力层传播信息
+        # Propagate information through graph attention layers
         for layer in self.graph_layers:
             nodes_new, attn = layer(nodes, self.causal_adjacency)
-            nodes = nodes + nodes_new  # 残差连接
+            nodes = nodes + nodes_new  # Residual connection
         
-        # 提取Z节点的表示
+        # Extract Z node representation
         z = nodes[:, 2, :]
         
         return z, {'attention': attn, 'node_representations': nodes}
 
     def forward_structural(self, x, u=None):
-        """使用结构方程的简化版本（用于消融）"""
+        """Simplified version using structural equations (for ablation)"""
         x_contrib = self.node_embeddings['x_embed'](x)
         
         if u is not None:
@@ -208,7 +201,7 @@ class StructuralEquationModel(nn.Module):
         else:
             u_contrib = torch.zeros_like(x_contrib)
         
-        # 线性组合（这是原始代码的逻辑）
+        # Linear combination
         combined = torch.cat([x_contrib, u_contrib], dim=-1)
         z = self.structural_equations['combine'](combined)
         z = torch.relu(z)
@@ -216,22 +209,22 @@ class StructuralEquationModel(nn.Module):
         return z, {}
 
     def forward(self, x, u=None):
-        """统一的前向传播接口"""
+        """Unified forward propagation interface"""
         if self.use_graph:
             return self.forward_graph(x, u)
         else:
             return self.forward_structural(x, u)
     
     def get_causal_attribution(self, x, u):
-        """因果归因分析"""
+        """Causal attribution analysis"""
         with torch.no_grad():
-            # 完整模型输出
+            # Full model output
             z_full, _ = self.forward(x, u)
             
-            # 仅X的贡献
+            # X-only contribution
             z_x_only, _ = self.forward(x, None)
             
-            # 仅U的贡献（需要零输入）
+            # U-only contribution (requires zero input)
             x_zero = torch.zeros_like(x)
             z_u_only, _ = self.forward(x_zero, u)
             
@@ -244,21 +237,21 @@ class StructuralEquationModel(nn.Module):
         return attributions
     
     def sensitivity_analysis(self, x, u, num_samples=10):
-        """敏感性分析：扰动U观察Z的变化"""
+        """Sensitivity analysis: perturb U and observe Z changes"""
         results = []
         
         with torch.no_grad():
-            # 基线
+            # Baseline
             z_baseline, _ = self.forward(x, u)
             
             for i in range(num_samples):
-                # 对U添加噪声
+                # Add noise to U
                 noise = torch.randn_like(u) * 0.1
                 u_perturbed = u + noise
                 
                 z_perturbed, _ = self.forward(x, u_perturbed)
                 
-                # 计算变化量
+                # Compute change magnitude
                 delta_z = torch.norm(z_perturbed - z_baseline, dim=-1).mean().item()
                 results.append(delta_z)
         
@@ -293,7 +286,7 @@ class BClassifier(nn.Module):
         else:
             self.v = nn.Identity()
         
-        # 因果模型部分
+        # Causal model components
         if causal and u_dim > 0:
             self.graph = StructuralEquationModel(
                 x_dim=input_size, 
@@ -325,7 +318,7 @@ class BClassifier(nn.Module):
 
         result = {}
         
-        # 注意力机制
+        # Attention mechanism
         _, m_indices = torch.sort(c, 0, descending=True)
         m_feats = torch.index_select(feats, dim=0, index=m_indices[0, :])
         q_max = self.q(m_feats)
@@ -339,7 +332,7 @@ class BClassifier(nn.Module):
             epsilon = epsilon.view([1, -1])
 
         if self.causal and self.u_dim > 0 and u is not None and self.graph is not None:
-            # 处理u的维度
+            # Process u dimensions
             if u.dim() == 2 and u.size(0) == feats.size(0):
                 u_processed = u[0].unsqueeze(0)
             elif u.dim() == 1:
@@ -355,7 +348,7 @@ class BClassifier(nn.Module):
                                         device=u_processed.device)
                     u_processed = torch.cat([u_processed, padding], dim=-1)
                 
-            # 使用改进的因果模型
+            # Use improved causal model
             z, causal_info = self.graph(epsilon, u_processed)
             result['Z'] = z
             result['causal_info'] = causal_info
@@ -367,7 +360,7 @@ class BClassifier(nn.Module):
             fcc_output = self.fcc(z)
             disease_classes = torch.mean(fcc_output, dim=0, keepdim=True)
             
-            # 因果归因
+            # Causal attribution
             if hasattr(self.graph, 'get_causal_attribution'):
                 try:
                     if u_processed.size(0) == 1 and epsilon.size(0) > 1:
@@ -394,11 +387,11 @@ class BClassifier(nn.Module):
         return self.attention_weights
     
     def perform_sensitivity_analysis(self, feats, c, u):
-        """执行敏感性分析（用于验证因果假设）"""
+        """Perform sensitivity analysis to verify causal assumptions"""
         if not (self.causal and self.graph is not None):
             return None
             
-        # 先通过attention得到聚合特征
+        # Get aggregated features through attention
         V = self.v(feats)
         Q = self.q(feats).view(feats.shape[0], -1)
         _, m_indices = torch.sort(c, 0, descending=True)
@@ -411,7 +404,7 @@ class BClassifier(nn.Module):
         if len(epsilon.shape) == 1:
             epsilon = epsilon.view([1, -1])
         
-        # 处理u
+        # Process u
         if u.dim() == 2 and u.size(0) == feats.size(0):
             u_processed = u[0].unsqueeze(0)
         elif u.dim() == 1:
@@ -419,7 +412,7 @@ class BClassifier(nn.Module):
         else:
             u_processed = u
             
-        # 执行敏感性分析
+        # Execute sensitivity analysis
         return self.graph.sensitivity_analysis(epsilon, u_processed)
 
 
@@ -448,7 +441,7 @@ class MILNet(nn.Module):
         return classes, prediction_bag, result, result['B']
 
     def get_interpretability_outputs(self, x, u=None):
-        """增强的可解释性输出"""
+        """Enhanced interpretability outputs"""
         try:
             feats, classes = self.i_classifier(x)
             
@@ -502,7 +495,7 @@ class MILNet(nn.Module):
             }
     
     def perform_sensitivity_analysis(self, x, u):
-        """在整个模型层面执行敏感性分析"""
+        """Perform sensitivity analysis at model level"""
         if not hasattr(self.b_classifier, 'perform_sensitivity_analysis'):
             return None
             
