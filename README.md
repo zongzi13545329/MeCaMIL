@@ -189,10 +189,10 @@ Navigate to './simclr' and edit the attributes in the configuration file 'config
 6. Training.
 ```
   # Train with CausalMIL (without demographics)
-  $ python train_tcga_causal.py --model=causalmil --dataset=[DATASET_NAME]
+  $ python Step3_WSI_classification_causalmil.py
   
   # Train with CausalMIL (with demographics)
-  $ python train_tcga_causal.py --model=causalmil --dataset=[DATASET_NAME] --use_demo --demographic_file=[PATH_TO_JSON]
+  $ python Step3_WSI_classification_causalmil.py --use_demographic
 ```
 >You will need to adjust `--num_classes` option if the dataset contains more than 2 positive classes or only 1 positive class and 1 negative class (binary classifier).
 
