@@ -37,10 +37,6 @@ This dataset requires 30GB of free disk space.
  ```
   $ python train_tcga_causal.py --model=causalmil --dataset=TCGA-lung-default --use_demo --demographic_file=./datasets/tcga-dataset/processed_clinical_data.json
 ```
->Train MeCaMIL on Camelyon16 dataset:
- ```
-  $ python train_tcga_causal.py --model=causalmil --dataset=Camelyon16 --num_classes=1
-```
 
 ### Training evaluation
 The training script automatically performs **5-fold cross-validation**. For each fold:
