@@ -1,0 +1,175 @@
+
+============================================================
+CausalMIL Training (Optimized)
+============================================================
+{'B': 1,
+ 'D_feat': 512,
+ 'D_inner': 256,
+ 'act': 'relu',
+ 'backbone': 'Resnet18',
+ 'causal_alpha': 0.1,
+ 'causal_reg': 0.01,
+ 'config': 'config/tcga_natural_supervised_config.yml',
+ 'data_dir': '/projects/standard/lin01231/song0760/ACMIL',
+ 'dataset': 'TCGA_lung',
+ 'dropout': 0.3,
+ 'dropout_patch': 0.0,
+ 'eval_only': False,
+ 'feats_size': 2048,
+ 'grad_clipping': 5,
+ 'log_iter': 100,
+ 'lr': 0.0001,
+ 'min_lr': 0,
+ 'min_patches': 1,
+ 'n_class': 2,
+ 'n_shot': -1,
+ 'n_worker': 0,
+ 'no_log': False,
+ 'num_classes': 2,
+ 'num_workers': 8,
+ 'perform_sensitivity': False,
+ 'pin_memory': True,
+ 'pretrain': 'natural_supervised',
+ 'save_interpretability': True,
+ 'seed': 2,
+ 'structural_depth': 1,
+ 'train_epoch': 50,
+ 'use_causal_graph': False,
+ 'use_demographic': True,
+ 'wandb_mode': 'online',
+ 'warmup_epoch': 5,
+ 'wd': 1e-05}
+============================================================
+
+H5 file: 938 slides
+Split: train=562, val=188, test=188
+CausalMIL Dataset: 562/562 slides (>= 1 patches)
+CausalMIL Dataset: 188/188 slides (>= 1 patches)
+CausalMIL Dataset: 188/188 slides (>= 1 patches)
+
+============================================================
+=== H5数据格式验证 ===
+============================================================
+
+Slide ID: TCGA-33-AASD-01Z-00-DX1
+Patches: 2475
+Feats: (2475, 2048)
+Label: (2,)
+Demographic: (8,) (used as model input)
+U_vector: (131,) (stored but not used)
+✓ Verification complete
+============================================================
+
+============================================================
+MODEL PARAMETERS
+============================================================
+Total parameters:      638,924
+Trainable parameters:  638,924
+Non-trainable params:  0
+Model size (MB):       2.44
+
+Instance classifier:   4,098
+Bag classifier:        634,826
+  - Causal graph:      347,008
+============================================================
+
+638924 638924
+
+Training starts...
+/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/nn/modules/loss.py:128: UserWarning: Using a target size (torch.Size([1, 1])) that is different to the input size (torch.Size([1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.l1_loss(input, target, reduction=self.reduction)
+Epoch: [0]  [  0/562]  eta: 0:27:22  lr: 0.000000  bag_loss: 0.728501  max_loss: 0.675853  time: 2.9234  data: 0.7412  max mem: 29
+Epoch: [0]  [100/562]  eta: 0:00:49  lr: 0.000004  bag_loss: 0.804138  max_loss: 0.676482  time: 0.0868  data: 0.0731  max mem: 87
+Epoch: [0]  [200/562]  eta: 0:00:34  lr: 0.000007  bag_loss: 0.740272  max_loss: 0.698871  time: 0.0889  data: 0.0746  max mem: 102
+Epoch: [0]  [300/562]  eta: 0:00:24  lr: 0.000011  bag_loss: 0.743967  max_loss: 0.693627  time: 0.0953  data: 0.0799  max mem: 102
+Epoch: [0]  [400/562]  eta: 0:00:14  lr: 0.000014  bag_loss: 0.558698  max_loss: 0.691694  time: 0.0680  data: 0.0537  max mem: 102
+Epoch: [0]  [500/562]  eta: 0:00:05  lr: 0.000018  bag_loss: 0.755602  max_loss: 0.703864  time: 0.0628  data: 0.0483  max mem: 102
+Epoch: [0]  [561/562]  eta: 0:00:00  lr: 0.000020  bag_loss: 0.504388  max_loss: 0.699232  time: 0.0798  data: 0.0649  max mem: 102
+Epoch: [0] Total time: 0:00:48 (0.0864 s / it)
+Evaluating Val: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 188/188 [00:16<00:00, 11.08it/s]
+Evaluating Test: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 188/188 [00:16<00:00, 11.15it/s]
+Epoch 0: Val AUC=0.8506 F1=0.3600 | Test AUC=0.8282
+/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/nn/modules/loss.py:128: UserWarning: Using a target size (torch.Size([1, 1])) that is different to the input size (torch.Size([1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.l1_loss(input, target, reduction=self.reduction)
+Epoch: [1]  [  0/562]  eta: 0:09:49  lr: 0.000020  bag_loss: 0.557516  max_loss: 0.687969  time: 1.0498  data: 1.0242  max mem: 185
+Epoch: [1]  [100/562]  eta: 0:00:38  lr: 0.000024  bag_loss: 0.667550  max_loss: 0.682295  time: 0.0579  data: 0.0407  max mem: 185
+Epoch: [1]  [200/562]  eta: 0:00:26  lr: 0.000027  bag_loss: 0.758317  max_loss: 0.692487  time: 0.0433  data: 0.0294  max mem: 185
+Epoch: [1]  [300/562]  eta: 0:00:18  lr: 0.000031  bag_loss: 0.536378  max_loss: 0.685801  time: 0.0413  data: 0.0258  max mem: 185
+Epoch: [1]  [400/562]  eta: 0:00:11  lr: 0.000034  bag_loss: 0.976915  max_loss: 0.710458  time: 0.0738  data: 0.0583  max mem: 185
+Epoch: [1]  [500/562]  eta: 0:00:04  lr: 0.000038  bag_loss: 0.358170  max_loss: 0.653689  time: 0.0577  data: 0.0431  max mem: 185
+Epoch: [1]  [561/562]  eta: 0:00:00  lr: 0.000040  bag_loss: 0.272917  max_loss: 0.676104  time: 0.0367  data: 0.0223  max mem: 185
+Epoch: [1] Total time: 0:00:39 (0.0711 s / it)
+Evaluating Val: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 188/188 [00:15<00:00, 12.24it/s]
+Evaluating Test: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 188/188 [00:14<00:00, 12.56it/s]
+Epoch 1: Val AUC=0.8995 F1=0.5179 | Test AUC=0.8692
+/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/nn/modules/loss.py:128: UserWarning: Using a target size (torch.Size([1, 1])) that is different to the input size (torch.Size([1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.l1_loss(input, target, reduction=self.reduction)
+Epoch: [2]  [  0/562]  eta: 0:10:22  lr: 0.000040  bag_loss: 0.460693  max_loss: 0.686765  time: 1.1078  data: 1.0852  max mem: 185
+Epoch: [2]  [100/562]  eta: 0:00:37  lr: 0.000044  bag_loss: 1.289511  max_loss: 0.710697  time: 0.0524  data: 0.0378  max mem: 185
+Epoch: [2]  [200/562]  eta: 0:00:28  lr: 0.000047  bag_loss: 0.358885  max_loss: 0.641014  time: 0.0641  data: 0.0489  max mem: 185
+Epoch: [2]  [300/562]  eta: 0:00:19  lr: 0.000051  bag_loss: 0.175843  max_loss: 0.638565  time: 0.1018  data: 0.0865  max mem: 185
+Epoch: [2]  [400/562]  eta: 0:00:11  lr: 0.000054  bag_loss: 0.436773  max_loss: 0.666253  time: 0.0880  data: 0.0735  max mem: 185
+Epoch: [2]  [500/562]  eta: 0:00:04  lr: 0.000058  bag_loss: 1.130349  max_loss: 0.654957  time: 0.0775  data: 0.0625  max mem: 185
+Epoch: [2]  [561/562]  eta: 0:00:00  lr: 0.000060  bag_loss: 0.381448  max_loss: 0.754097  time: 0.0549  data: 0.0401  max mem: 185
+Epoch: [2] Total time: 0:00:41 (0.0736 s / it)
+Evaluating Val: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 188/188 [00:15<00:00, 12.33it/s]
+Evaluating Test: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 188/188 [00:14<00:00, 12.66it/s]
+Epoch 2: Val AUC=0.9086 F1=0.7871 | Test AUC=0.8986
+/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/nn/modules/loss.py:128: UserWarning: Using a target size (torch.Size([1, 1])) that is different to the input size (torch.Size([1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.l1_loss(input, target, reduction=self.reduction)
+Epoch: [3]  [  0/562]  eta: 0:02:44  lr: 0.000060  bag_loss: 0.231125  max_loss: 0.584986  time: 0.2934  data: 0.2746  max mem: 185
+Epoch: [3]  [100/562]  eta: 0:00:35  lr: 0.000064  bag_loss: 0.534730  max_loss: 0.757517  time: 0.0578  data: 0.0430  max mem: 185
+Epoch: [3]  [200/562]  eta: 0:00:28  lr: 0.000067  bag_loss: 0.169121  max_loss: 0.714004  time: 0.0856  data: 0.0713  max mem: 185
+Epoch: [3]  [300/562]  eta: 0:00:19  lr: 0.000071  bag_loss: 0.305148  max_loss: 0.616468  time: 0.0477  data: 0.0337  max mem: 185
+Epoch: [3]  [400/562]  eta: 0:00:11  lr: 0.000074  bag_loss: 0.291285  max_loss: 0.757910  time: 0.0877  data: 0.0720  max mem: 185
+Epoch: [3]  [500/562]  eta: 0:00:04  lr: 0.000078  bag_loss: 1.773848  max_loss: 0.860121  time: 0.0969  data: 0.0820  max mem: 185
+Epoch: [3]  [561/562]  eta: 0:00:00  lr: 0.000080  bag_loss: 3.377986  max_loss: 0.922626  time: 0.0703  data: 0.0560  max mem: 185
+Epoch: [3] Total time: 0:00:40 (0.0718 s / it)
+Evaluating Val: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 188/188 [00:15<00:00, 12.37it/s]
+Evaluating Test: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 188/188 [00:14<00:00, 12.63it/s]
+Epoch 3: Val AUC=0.9237 F1=0.7519 | Test AUC=0.8966
+/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/nn/modules/loss.py:128: UserWarning: Using a target size (torch.Size([1, 1])) that is different to the input size (torch.Size([1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.l1_loss(input, target, reduction=self.reduction)
+Epoch: [4]  [  0/562]  eta: 0:03:04  lr: 0.000080  bag_loss: 0.177775  max_loss: 0.492888  time: 0.3285  data: 0.3081  max mem: 185
+Epoch: [4]  [100/562]  eta: 0:00:36  lr: 0.000084  bag_loss: 0.474992  max_loss: 0.728762  time: 0.0528  data: 0.0384  max mem: 185
+Epoch: [4]  [200/562]  eta: 0:00:26  lr: 0.000087  bag_loss: 1.756517  max_loss: 0.812554  time: 0.0765  data: 0.0613  max mem: 185
+Epoch: [4]  [300/562]  eta: 0:00:18  lr: 0.000091  bag_loss: 0.038850  max_loss: 0.508998  time: 0.0549  data: 0.0414  max mem: 185
+Epoch: [4]  [400/562]  eta: 0:00:11  lr: 0.000094  bag_loss: 0.295892  max_loss: 0.545076  time: 0.0704  data: 0.0560  max mem: 185
+Epoch: [4]  [500/562]  eta: 0:00:04  lr: 0.000098  bag_loss: 0.413968  max_loss: 0.732975  time: 0.1143  data: 0.1004  max mem: 185
+Epoch: [4]  [561/562]  eta: 0:00:00  lr: 0.000100  bag_loss: 0.899503  max_loss: 0.755628  time: 0.0698  data: 0.0557  max mem: 185
+Epoch: [4] Total time: 0:00:41 (0.0736 s / it)
+Evaluating Val: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 188/188 [00:15<00:00, 12.38it/s]
+Evaluating Test: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 188/188 [00:15<00:00, 12.48it/s]
+Epoch 4: Val AUC=0.8765 F1=0.7044 | Test AUC=0.8581
+/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/nn/modules/loss.py:128: UserWarning: Using a target size (torch.Size([1, 1])) that is different to the input size (torch.Size([1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.l1_loss(input, target, reduction=self.reduction)
+Epoch: [5]  [  0/562]  eta: 0:03:26  lr: 0.000100  bag_loss: 0.107371  max_loss: 0.758367  time: 0.3669  data: 0.3472  max mem: 185
+Traceback (most recent call last):
+  File "/projects/standard/lin01231/song0760/ACMIL/Step3_WSI_classification_causalmil.py", line 716, in <module>
+    main()
+    ~~~~^^
+  File "/projects/standard/lin01231/song0760/ACMIL/Step3_WSI_classification_causalmil.py", line 650, in main
+    train_loss = train_one_epoch_with_h5(model, criterion, train_loader,
+                                         optimizer, device, epoch, conf)
+  File "/projects/standard/lin01231/song0760/ACMIL/Step3_WSI_classification_causalmil.py", line 243, in train_one_epoch_with_h5
+    for data_it, batch in enumerate(metric_logger.log_every(data_loader, print_freq, header)):
+                          ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/projects/standard/lin01231/song0760/ACMIL/utils/utils.py", line 193, in log_every
+    for obj in iterable:
+               ^^^^^^^^
+  File "/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/utils/data/dataloader.py", line 733, in __next__
+    data = self._next_data()
+  File "/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/utils/data/dataloader.py", line 1491, in _next_data
+    idx, data = self._get_data()
+                ~~~~~~~~~~~~~~^^
+  File "/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/utils/data/dataloader.py", line 1443, in _get_data
+    success, data = self._try_get_data()
+                    ~~~~~~~~~~~~~~~~~~^^
+  File "/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/utils/data/dataloader.py", line 1284, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/users/5/song0760/.conda/envs/dsmil/lib/python3.13/queue.py", line 213, in get
+    self.not_empty.wait(remaining)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/users/5/song0760/.conda/envs/dsmil/lib/python3.13/threading.py", line 363, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

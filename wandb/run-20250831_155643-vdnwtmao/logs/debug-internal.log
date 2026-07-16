@@ -1,0 +1,2 @@
+{"time":"2025-08-31T15:56:44.79940896-05:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2025-08-31T15:56:44.803526478-05:00","level":"ERROR+4","msg":"stream_init: failed to fetch credentials: api: couldn't get API key: settings: failed to get API key from netrc: open /users/5/song0760/.netrc: no such file or directory"}

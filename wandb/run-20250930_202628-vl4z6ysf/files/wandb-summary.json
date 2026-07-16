@@ -1,0 +1,1 @@
+{"_timestamp":1.7592823094540904e+09,"test/auc":0,"val/acc":0.5851063829787234,"test/acc":0.6329787234042553,"test/f1":0,"val/auc":0,"val/f1":0,"train/max_loss":NaN,"_step":2250,"train/bag_loss":NaN,"epoch":2,"_wandb":{"runtime":354},"_runtime":354,"train/loss":NaN}

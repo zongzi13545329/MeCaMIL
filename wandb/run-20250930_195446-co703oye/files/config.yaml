@@ -1,0 +1,87 @@
+_wandb:
+    value:
+        cli_version: 0.21.1
+        e:
+            uveaigr3maw81ainhuwarf2epzk8l9sh:
+                args:
+                    - --dataset
+                    - TCGA_lung
+                    - --use_demographic
+                    - --use_causal_graph
+                    - --perform_sensitivity
+                    - --wandb_mode
+                    - online
+                codePath: Step3_WSI_classification_causalmil.py
+                codePathLocal: Step3_WSI_classification_causalmil.py
+                cpu_count: 64
+                cpu_count_logical: 64
+                cudaVersion: "12.8"
+                disk:
+                    /:
+                        total: "14687412224"
+                        used: "11127062528"
+                email: song0760@umn.edu
+                executable: /users/5/song0760/.conda/envs/dsmil/bin/python
+                git:
+                    commit: 7432274305b25ef1d256f05ff807a1b7915023a4
+                    remote: https://github.com/dazhangyu123/ACMIL.git
+                gpu: NVIDIA A100-SXM4-40GB
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "42949672960"
+                      name: NVIDIA A100-SXM4-40GB
+                      uuid: GPU-6eec9a51-4d00-d224-9739-fe498a8a70fd
+                host: aga38
+                memory:
+                    total: "540488527872"
+                os: Linux-4.18.0-553.69.1.el8_10.x86_64-x86_64-with-glibc2.28
+                program: /projects/standard/lin01231/song0760/ACMIL/Step3_WSI_classification_causalmil.py
+                python: CPython 3.13.2
+                root: /projects/standard/lin01231/song0760/ACMIL
+                slurm:
+                    job_id: "40901970"
+                startedAt: "2025-10-01T00:54:46.518185Z"
+                writerId: uveaigr3maw81ainhuwarf2epzk8l9sh
+        m: []
+        python_version: 3.13.2
+        t:
+            "1":
+                - 1
+                - 5
+                - 41
+                - 49
+                - 53
+                - 63
+            "2":
+                - 1
+                - 5
+                - 41
+                - 49
+                - 53
+                - 63
+            "3":
+                - 16
+            "4": 3.13.2
+            "5": 0.21.1
+            "12": 0.21.1
+            "13": linux-x86_64
+causal_alpha:
+    value: 0.1
+dataset:
+    value: TCGA_lung
+feats_size:
+    value: 2048
+input_type:
+    value: demographic_8dim
+model:
+    value: causalmil
+pretrain:
+    value: natural_supervised
+seed:
+    value: 2
+structural_depth:
+    value: 1
+use_demographic:
+    value: true

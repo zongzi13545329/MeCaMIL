@@ -1,0 +1,138 @@
+
+============================================================
+CausalMIL Training (Optimized)
+============================================================
+{'B': 1,
+ 'D_feat': 512,
+ 'D_inner': 256,
+ 'act': 'relu',
+ 'backbone': 'Resnet18',
+ 'causal_alpha': 0.1,
+ 'causal_reg': 0.01,
+ 'config': 'config/tcga_natural_supervised_config.yml',
+ 'data_dir': '/projects/standard/lin01231/song0760/ACMIL',
+ 'dataset': 'TCGA_lung',
+ 'dropout': 0.3,
+ 'dropout_patch': 0.0,
+ 'eval_only': False,
+ 'feats_size': 2048,
+ 'grad_clipping': 5,
+ 'log_iter': 100,
+ 'lr': 0.0001,
+ 'min_lr': 0,
+ 'min_patches': 1,
+ 'n_class': 2,
+ 'n_shot': -1,
+ 'n_worker': 0,
+ 'no_log': False,
+ 'num_classes': 2,
+ 'num_workers': 8,
+ 'perform_sensitivity': False,
+ 'pin_memory': True,
+ 'pretrain': 'natural_supervised',
+ 'save_interpretability': True,
+ 'seed': 2,
+ 'structural_depth': 1,
+ 'train_epoch': 50,
+ 'use_causal_graph': False,
+ 'use_demographic': True,
+ 'wandb_mode': 'online',
+ 'warmup_epoch': 5,
+ 'wd': 1e-05}
+============================================================
+
+H5 file: 938 slides
+Split: train=562, val=188, test=188
+CausalMIL Dataset: 562/562 slides (>= 1 patches)
+CausalMIL Dataset: 188/188 slides (>= 1 patches)
+CausalMIL Dataset: 188/188 slides (>= 1 patches)
+
+============================================================
+=== H5数据格式验证 ===
+============================================================
+
+Slide ID: TCGA-33-AASD-01Z-00-DX1
+Patches: 2475
+Feats: (2475, 2048)
+Label: (2,)
+Demographic: (8,) (used as model input)
+U_vector: (131,) (stored but not used)
+✓ Verification complete
+============================================================
+
+============================================================
+MODEL PARAMETERS
+============================================================
+Total parameters:      1,158,220
+Trainable parameters:  1,158,220
+Non-trainable params:  0
+Model size (MB):       4.42
+
+Instance classifier:   4,098
+Bag classifier:        1,154,122
+  - Causal graph:      857,856
+============================================================
+
+1158220 1158220
+
+Training starts...
+/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/nn/modules/loss.py:128: UserWarning: Using a target size (torch.Size([1, 1])) that is different to the input size (torch.Size([1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.l1_loss(input, target, reduction=self.reduction)
+Epoch: [0]  [  0/562]  eta: 0:13:06  lr: 0.000000  bag_loss: 0.775674  max_loss: 0.693672  time: 1.4001  data: 0.7886  max mem: 37
+Traceback (most recent call last):
+  File "/projects/standard/lin01231/song0760/ACMIL/Step3_WSI_classification_causalmil.py", line 716, in <module>
+    main()
+    ~~~~^^
+  File "/projects/standard/lin01231/song0760/ACMIL/Step3_WSI_classification_causalmil.py", line 650, in main
+    train_loss = train_one_epoch_with_h5(model, criterion, train_loader,
+                                         optimizer, device, epoch, conf)
+  File "/projects/standard/lin01231/song0760/ACMIL/Step3_WSI_classification_causalmil.py", line 262, in train_one_epoch_with_h5
+    ins_prediction, bag_prediction, result = model(bag_feats, u)
+                                             ~~~~~^^^^^^^^^^^^^^
+  File "/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/projects/standard/lin01231/song0760/ACMIL/modules/causalmil.py", line 511, in forward
+    prediction_bag, result = self.b_classifier(feats, classes, u_processed)
+                             ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/projects/standard/lin01231/song0760/ACMIL/modules/causalmil.py", line 441, in forward
+    result['causal_attributions'] = self.graph.get_causal_attribution(
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        epsilon, u_for_attribution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/projects/standard/lin01231/song0760/ACMIL/modules/causalmil.py", line 304, in get_causal_attribution
+    modified_output, _ = self.forward(x, u_modified)
+                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/projects/standard/lin01231/song0760/ACMIL/modules/causalmil.py", line 224, in forward
+    return self.forward_structural(x, u)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/projects/standard/lin01231/song0760/ACMIL/modules/causalmil.py", line 202, in forward_structural
+    x_contrib = self.node_embeddings['x_embed'](x)
+  File "/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/nn/modules/dropout.py", line 70, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/nn/functional.py", line 1425, in dropout
+    _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
+                                                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

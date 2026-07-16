@@ -1,0 +1,6 @@
+{"time":"2025-09-30T23:32:59.421470085-05:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpvaskk1ga/port-925516.txt","pid":925516,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-09-30T23:32:59.421996492-05:00","level":"INFO","msg":"server: will exit if parent process dies","ppid":925516}
+{"time":"2025-09-30T23:32:59.421991452-05:00","level":"INFO","msg":"server: accepting connections","addr":{"Name":"/tmp/wandb-925516-925550-335365554/socket","Net":"unix"}}
+{"time":"2025-09-30T23:32:59.594036209-05:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"1(@)"}
+{"time":"2025-09-30T23:32:59.599795978-05:00","level":"INFO","msg":"handleInformInit: received","streamId":"zk2snrse","id":"1(@)"}
+{"time":"2025-09-30T23:32:59.834135839-05:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"zk2snrse","id":"1(@)"}

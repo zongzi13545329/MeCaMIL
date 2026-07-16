@@ -1,0 +1,1 @@
+{"_runtime":181,"train/loss":NaN,"_step":1124,"val/f1":0,"val/loss":NaN,"test/acc":0.6329787234042553,"train/bag_loss":NaN,"epoch":0,"_timestamp":1.7592802447125323e+09,"val/auc":0,"test/auc":0,"test/f1":0,"_wandb":{"runtime":181},"train/max_loss":NaN,"val/acc":0.5851063829787234,"test/loss":NaN}

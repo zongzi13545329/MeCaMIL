@@ -1,0 +1,52 @@
+{
+  "os": "Linux-4.18.0-553.69.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "python": "CPython 3.13.2",
+  "startedAt": "2025-10-01T01:38:06.913016Z",
+  "args": [
+    "--dataset",
+    "TCGA_lung",
+    "--use_demographic",
+    "--use_causal_graph",
+    "--perform_sensitivity",
+    "--wandb_mode",
+    "online"
+  ],
+  "program": "/projects/standard/lin01231/song0760/ACMIL/Step3_WSI_classification_causalmil.py",
+  "codePath": "Step3_WSI_classification_causalmil.py",
+  "codePathLocal": "Step3_WSI_classification_causalmil.py",
+  "git": {
+    "remote": "https://github.com/dazhangyu123/ACMIL.git",
+    "commit": "7432274305b25ef1d256f05ff807a1b7915023a4"
+  },
+  "email": "song0760@umn.edu",
+  "root": "/projects/standard/lin01231/song0760/ACMIL",
+  "host": "aga38",
+  "executable": "/users/5/song0760/.conda/envs/dsmil/bin/python",
+  "cpu_count": 64,
+  "cpu_count_logical": 64,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "14687412224",
+      "used": "11127812096"
+    }
+  },
+  "memory": {
+    "total": "540488527872"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA A100-SXM4-40GB",
+      "memoryTotal": "42949672960",
+      "cudaCores": 6912,
+      "architecture": "Ampere",
+      "uuid": "GPU-6eec9a51-4d00-d224-9739-fe498a8a70fd"
+    }
+  ],
+  "cudaVersion": "12.8",
+  "slurm": {
+    "job_id": "40901970"
+  },
+  "writerId": "skndfegro38sb3zlwdc51qqp6cixohdn"
+}

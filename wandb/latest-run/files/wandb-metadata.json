@@ -1,0 +1,46 @@
+{
+  "os": "Linux-4.18.0-553.80.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "python": "CPython 3.13.2",
+  "startedAt": "2025-11-12T21:41:04.373Z",
+  "args": [
+    "--use_demographic"
+  ],
+  "program": "/projects/standard/lin01231/song0760/ACMIL/Step3_WSI_classification_causalmil.py",
+  "codePath": "Step3_WSI_classification_causalmil.py",
+  "codePathLocal": "Step3_WSI_classification_causalmil.py",
+  "git": {
+    "remote": "https://github.com/dazhangyu123/ACMIL.git",
+    "commit": "7432274305b25ef1d256f05ff807a1b7915023a4"
+  },
+  "email": "song0760@umn.edu",
+  "root": "/projects/standard/lin01231/song0760/ACMIL",
+  "host": "agc09",
+  "executable": "/users/5/song0760/.conda/envs/dsmil/bin/python",
+  "cpu_count": 128,
+  "cpu_count_logical": 128,
+  "gpu": "NVIDIA A40",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "14687412224",
+      "used": "11010314240"
+    }
+  },
+  "memory": {
+    "total": "540466790400"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA A40",
+      "memoryTotal": "48305799168",
+      "cudaCores": 10752,
+      "architecture": "Ampere",
+      "uuid": "GPU-d83a6ce6-199c-f45b-dcbf-933d66fcf72c"
+    }
+  ],
+  "cudaVersion": "13.0",
+  "slurm": {
+    "job_id": "43348630"
+  },
+  "writerId": "u7katqi8zhul8vrkbos0jnr6zzsmyfef"
+}

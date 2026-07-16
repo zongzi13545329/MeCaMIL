@@ -1,0 +1,28 @@
+2025-09-30 20:38:06,952 INFO    MainThread:863753 [wandb_setup.py:_flush():80] Current SDK version is 0.21.1
+2025-09-30 20:38:06,952 INFO    MainThread:863753 [wandb_setup.py:_flush():80] Configure stats pid to 863753
+2025-09-30 20:38:06,952 INFO    MainThread:863753 [wandb_setup.py:_flush():80] Loading settings from /users/5/song0760/.config/wandb/settings
+2025-09-30 20:38:06,952 INFO    MainThread:863753 [wandb_setup.py:_flush():80] Loading settings from /projects/standard/lin01231/song0760/ACMIL/wandb/settings
+2025-09-30 20:38:06,952 INFO    MainThread:863753 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2025-09-30 20:38:06,953 INFO    MainThread:863753 [wandb_init.py:setup_run_log_directory():703] Logging user logs to /projects/standard/lin01231/song0760/ACMIL/wandb/run-20250930_203806-4m5owsow/logs/debug.log
+2025-09-30 20:38:06,953 INFO    MainThread:863753 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to /projects/standard/lin01231/song0760/ACMIL/wandb/run-20250930_203806-4m5owsow/logs/debug-internal.log
+2025-09-30 20:38:06,953 INFO    MainThread:863753 [wandb_init.py:init():830] calling init triggers
+2025-09-30 20:38:06,953 INFO    MainThread:863753 [wandb_init.py:init():835] wandb.init called with sweep_config: {}
+config: {'train_epoch': 50, 'B': 1, 'warmup_epoch': 5, 'wd': 1e-05, 'lr': 0.0001, 'min_lr': 0, 'dataset': 'TCGA_lung', 'n_class': 2, 'data_dir': '/projects/standard/lin01231/song0760/ACMIL', 'n_worker': 0, 'pin_memory': True, 'n_shot': -1, 'min_patches': 1, 'backbone': 'Resnet18', 'pretrain': 'natural_supervised', 'D_feat': 512, 'D_inner': 256, 'config': 'config/tcga_natural_supervised_config.yml', 'eval_only': False, 'seed': 2, 'wandb_mode': 'online', 'grad_clipping': 5, 'causal_alpha': 0.1, 'structural_depth': 1, 'use_demographic': True, 'causal_reg': 0.01, 'act': 'relu', 'dropout': 0.25, 'log_iter': 100, 'num_workers': 8, 'no_log': False, 'use_causal_graph': True, 'perform_sensitivity': True, 'save_interpretability': True, 'feats_size': 2048, 'num_classes': 2, 'dropout_patch': 0.0, '_wandb': {}}
+2025-09-30 20:38:06,953 INFO    MainThread:863753 [wandb_init.py:init():871] starting backend
+2025-09-30 20:38:07,170 INFO    MainThread:863753 [wandb_init.py:init():874] sending inform_init request
+2025-09-30 20:38:07,174 INFO    MainThread:863753 [wandb_init.py:init():882] backend started and connected
+2025-09-30 20:38:07,177 INFO    MainThread:863753 [wandb_init.py:init():953] updated telemetry
+2025-09-30 20:38:07,207 INFO    MainThread:863753 [wandb_init.py:init():977] communicating run to backend with 90.0 second timeout
+2025-09-30 20:38:07,540 INFO    MainThread:863753 [wandb_init.py:init():1029] starting run threads in backend
+2025-09-30 20:38:07,777 INFO    MainThread:863753 [wandb_run.py:_console_start():2494] atexit reg
+2025-09-30 20:38:07,777 INFO    MainThread:863753 [wandb_run.py:_redirect():2342] redirect: wrap_raw
+2025-09-30 20:38:07,778 INFO    MainThread:863753 [wandb_run.py:_redirect():2411] Wrapping output streams.
+2025-09-30 20:38:07,778 INFO    MainThread:863753 [wandb_run.py:_redirect():2434] Redirects installed.
+2025-09-30 20:38:07,783 INFO    MainThread:863753 [wandb_init.py:init():1075] run started, returning control to user process
+2025-09-30 21:53:24,743 INFO    MainThread:863753 [wandb_run.py:_finish():2260] finishing run song0760-university-of-minnesota/CausalMIL-Optimized-Demo/4m5owsow
+2025-09-30 21:53:24,744 INFO    MainThread:863753 [wandb_run.py:_atexit_cleanup():2459] got exitcode: 0
+2025-09-30 21:53:24,744 INFO    MainThread:863753 [wandb_run.py:_restore():2441] restore
+2025-09-30 21:53:24,744 INFO    MainThread:863753 [wandb_run.py:_restore():2447] restore done
+2025-09-30 21:53:25,220 INFO    MainThread:863753 [wandb_run.py:_footer_history_summary_info():3895] rendering history
+2025-09-30 21:53:25,221 INFO    MainThread:863753 [wandb_run.py:_footer_history_summary_info():3927] rendering summary
+2025-09-30 21:53:25,222 INFO    MainThread:863753 [wandb_run.py:_footer_sync_info():3856] logging synced files

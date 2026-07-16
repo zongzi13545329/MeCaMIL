@@ -1,0 +1,30 @@
+2025-03-12 01:34:30,701 INFO    MainThread:3815718 [wandb_setup.py:_flush():79] Current SDK version is 0.18.3
+2025-03-12 01:34:30,702 INFO    MainThread:3815718 [wandb_setup.py:_flush():79] Configure stats pid to 3815718
+2025-03-12 01:34:30,702 INFO    MainThread:3815718 [wandb_setup.py:_flush():79] Loading settings from /root/.config/wandb/settings
+2025-03-12 01:34:30,702 INFO    MainThread:3815718 [wandb_setup.py:_flush():79] Loading settings from /home/lin01231/song0760/ACMIL/wandb/settings
+2025-03-12 01:34:30,702 INFO    MainThread:3815718 [wandb_setup.py:_flush():79] Loading settings from environment variables: {}
+2025-03-12 01:34:30,702 INFO    MainThread:3815718 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': 'online', '_disable_service': None}
+2025-03-12 01:34:30,702 INFO    MainThread:3815718 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': 'Step3_WSI_classification.py', 'program_abspath': '/home/lin01231/song0760/ACMIL/Step3_WSI_classification.py', 'program': '/home/lin01231/song0760/ACMIL/Step3_WSI_classification.py'}
+2025-03-12 01:34:30,702 INFO    MainThread:3815718 [wandb_setup.py:_flush():79] Applying login settings: {}
+2025-03-12 01:34:30,702 INFO    MainThread:3815718 [wandb_setup.py:_flush():79] Applying login settings: {'mode': 'offline'}
+2025-03-12 01:34:30,702 INFO    MainThread:3815718 [wandb_init.py:_log_setup():532] Logging user logs to /home/lin01231/song0760/ACMIL/wandb/run-20250312_013430-ogdtcds1/logs/debug.log
+2025-03-12 01:34:30,702 INFO    MainThread:3815718 [wandb_init.py:_log_setup():533] Logging internal logs to /home/lin01231/song0760/ACMIL/wandb/run-20250312_013430-ogdtcds1/logs/debug-internal.log
+2025-03-12 01:34:30,703 INFO    MainThread:3815718 [wandb_init.py:init():617] calling init triggers
+2025-03-12 01:34:30,703 INFO    MainThread:3815718 [wandb_init.py:init():624] wandb.init called with sweep_config: {}
+config: {'dataset': 'camelyon', 'pretrain': 'medical_ssl', 'arch': 'dsmil', 'seed': 4}
+2025-03-12 01:34:30,703 INFO    MainThread:3815718 [wandb_init.py:init():667] starting backend
+2025-03-12 01:34:30,703 INFO    MainThread:3815718 [wandb_init.py:init():671] sending inform_init request
+2025-03-12 01:34:30,704 INFO    MainThread:3815718 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-03-12 01:34:30,706 INFO    MainThread:3815718 [wandb_init.py:init():684] backend started and connected
+2025-03-12 01:34:30,713 INFO    MainThread:3815718 [wandb_init.py:init():779] updated telemetry
+2025-03-12 01:34:30,736 WARNING MsgRouterThr:3815718 [router.py:message_loop():77] message_loop has been closed
+2025-03-12 01:34:30,753 INFO    MainThread:3815718 [wandb_init.py:init():812] communicating run to backend with 90.0 second timeout
+2025-03-12 01:34:35,756 ERROR   MainThread:3815718 [wandb_init.py:init():1262] error in wandb.init()
+Traceback (most recent call last):
+  File "/opt/miniconda/envs/gigapath/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 1252, in init
+    return wi.init()
+  File "/opt/miniconda/envs/gigapath/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 815, in init
+    result = run_init_handle.wait(
+  File "/opt/miniconda/envs/gigapath/lib/python3.9/site-packages/wandb/sdk/lib/mailbox.py", line 281, in wait
+    raise MailboxError("transport failed")
+wandb.sdk.lib.mailbox.MailboxError: transport failed

@@ -1,0 +1,95 @@
+
+============================================================
+CausalMIL Training (Optimized)
+============================================================
+{'B': 1,
+ 'D_feat': 512,
+ 'D_inner': 256,
+ 'act': 'relu',
+ 'backbone': 'Resnet18',
+ 'causal_alpha': 0.1,
+ 'causal_reg': 0.01,
+ 'config': 'config/tcga_natural_supervised_config.yml',
+ 'data_dir': '/projects/standard/lin01231/song0760/ACMIL',
+ 'dataset': 'TCGA_lung',
+ 'dropout': 0.3,
+ 'dropout_patch': 0.0,
+ 'eval_only': False,
+ 'feats_size': 2048,
+ 'grad_clipping': 5,
+ 'log_iter': 100,
+ 'lr': 0.0001,
+ 'min_lr': 0,
+ 'min_patches': 1,
+ 'n_class': 2,
+ 'n_shot': -1,
+ 'n_worker': 0,
+ 'no_log': False,
+ 'num_classes': 2,
+ 'num_workers': 8,
+ 'perform_sensitivity': False,
+ 'pin_memory': True,
+ 'pretrain': 'natural_supervised',
+ 'save_interpretability': True,
+ 'seed': 2,
+ 'structural_depth': 1,
+ 'train_epoch': 50,
+ 'use_causal_graph': False,
+ 'use_demographic': True,
+ 'wandb_mode': 'online',
+ 'warmup_epoch': 5,
+ 'wd': 1e-05}
+============================================================
+
+H5 file: 938 slides
+Split: train=562, val=188, test=188
+CausalMIL Dataset: 562/562 slides (>= 1 patches)
+CausalMIL Dataset: 188/188 slides (>= 1 patches)
+CausalMIL Dataset: 188/188 slides (>= 1 patches)
+
+============================================================
+=== H5数据格式验证 ===
+============================================================
+
+Slide ID: TCGA-33-AASD-01Z-00-DX1
+Patches: 2475
+Feats: (2475, 2048)
+Label: (2,)
+Demographic: (8,) (used as model input)
+U_vector: (131,) (stored but not used)
+✓ Verification complete
+============================================================
+
+============================================================
+MODEL PARAMETERS
+============================================================
+Total parameters:      638,924
+Trainable parameters:  638,924
+Non-trainable params:  0
+Model size (MB):       2.44
+
+Instance classifier:   4,098
+Bag classifier:        634,826
+  - Causal graph:      347,008
+============================================================
+
+638924 638924
+
+Training starts...
+/users/5/song0760/.conda/envs/dsmil/lib/python3.13/site-packages/torch/nn/modules/loss.py:128: UserWarning: Using a target size (torch.Size([1, 1])) that is different to the input size (torch.Size([1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.l1_loss(input, target, reduction=self.reduction)
+Epoch: [0]  [  0/562]  eta: 0:10:52  lr: 0.000000  bag_loss: 0.728501  max_loss: 0.675853  time: 1.1614  data: 0.6606  max mem: 29
+Epoch: [0]  [100/562]  eta: 0:00:35  lr: 0.000004  bag_loss: 0.804138  max_loss: 0.676482  time: 0.0600  data: 0.0434  max mem: 87
+Traceback (most recent call last):
+  File "/projects/standard/lin01231/song0760/ACMIL/Step3_WSI_classification_causalmil.py", line 716, in <module>
+    main()
+    ~~~~^^
+  File "/projects/standard/lin01231/song0760/ACMIL/Step3_WSI_classification_causalmil.py", line 650, in main
+    train_loss = train_one_epoch_with_h5(model, criterion, train_loader,
+                                         optimizer, device, epoch, conf)
+  File "/projects/standard/lin01231/song0760/ACMIL/Step3_WSI_classification_causalmil.py", line 250, in train_one_epoch_with_h5
+    bag_feats, u, bag_label, demo_info = extract_data_from_h5_batch(batch, conf, device)
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/projects/standard/lin01231/song0760/ACMIL/Step3_WSI_classification_causalmil.py", line 193, in extract_data_from_h5_batch
+    bag_feats = batch['feats'].to(device)
+KeyboardInterrupt

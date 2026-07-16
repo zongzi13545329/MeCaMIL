@@ -1,0 +1,143 @@
+_wandb:
+    value:
+        cli_version: 0.21.1
+        e:
+            9vuhx1nxw9svyhm52z0z2yoeyrcz9r0c:
+                args:
+                    - --dataset
+                    - TCGA_lung
+                    - --use_demographic
+                    - --use_causal_graph
+                    - --perform_sensitivity
+                    - --wandb_mode
+                    - online
+                codePath: Step3_WSI_classification_causalmil.py
+                codePathLocal: Step3_WSI_classification_causalmil.py
+                cpu_count: 64
+                cpu_count_logical: 64
+                cudaVersion: "12.8"
+                disk:
+                    /:
+                        total: "14687412224"
+                        used: "11130429440"
+                email: song0760@umn.edu
+                executable: /users/5/song0760/.conda/envs/dsmil/bin/python
+                git:
+                    commit: 7432274305b25ef1d256f05ff807a1b7915023a4
+                    remote: https://github.com/dazhangyu123/ACMIL.git
+                gpu: NVIDIA A100-SXM4-40GB
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "42949672960"
+                      name: NVIDIA A100-SXM4-40GB
+                      uuid: GPU-6eec9a51-4d00-d224-9739-fe498a8a70fd
+                host: aga38
+                memory:
+                    total: "540488527872"
+                os: Linux-4.18.0-553.69.1.el8_10.x86_64-x86_64-with-glibc2.28
+                program: /projects/standard/lin01231/song0760/ACMIL/Step3_WSI_classification_causalmil.py
+                python: CPython 3.13.2
+                root: /projects/standard/lin01231/song0760/ACMIL
+                slurm:
+                    job_id: "40901970"
+                startedAt: "2025-10-01T04:10:37.173900Z"
+                writerId: 9vuhx1nxw9svyhm52z0z2yoeyrcz9r0c
+        m: []
+        python_version: 3.13.2
+        t:
+            "1":
+                - 1
+                - 5
+                - 41
+                - 49
+                - 53
+                - 63
+            "2":
+                - 1
+                - 5
+                - 41
+                - 49
+                - 53
+                - 63
+            "3":
+                - 16
+            "4": 3.13.2
+            "5": 0.21.1
+            "12": 0.21.1
+            "13": linux-x86_64
+B:
+    value: 1
+D_feat:
+    value: 512
+D_inner:
+    value: 256
+act:
+    value: relu
+backbone:
+    value: Resnet18
+causal_alpha:
+    value: 0.1
+causal_reg:
+    value: 0.01
+config:
+    value: config/tcga_natural_supervised_config.yml
+data_dir:
+    value: /projects/standard/lin01231/song0760/ACMIL
+dataset:
+    value: TCGA_lung
+dropout:
+    value: 0.3
+dropout_patch:
+    value: 0
+eval_only:
+    value: false
+feats_size:
+    value: 2048
+grad_clipping:
+    value: 5
+log_iter:
+    value: 100
+lr:
+    value: 0.0001
+min_lr:
+    value: 0
+min_patches:
+    value: 1
+n_class:
+    value: 2
+n_shot:
+    value: -1
+n_worker:
+    value: 0
+no_log:
+    value: false
+num_classes:
+    value: 2
+num_workers:
+    value: 8
+perform_sensitivity:
+    value: true
+pin_memory:
+    value: true
+pretrain:
+    value: natural_supervised
+save_interpretability:
+    value: true
+seed:
+    value: 2
+structural_depth:
+    value: 1
+train_epoch:
+    value: 50
+use_causal_graph:
+    value: true
+use_demographic:
+    value: true
+wandb_mode:
+    value: online
+warmup_epoch:
+    value: 5
+wd:
+    value: 1e-05

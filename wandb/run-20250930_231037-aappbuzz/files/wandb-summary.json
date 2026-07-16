@@ -1,0 +1,1 @@
+{"train/loss":0.6083082556724548,"_timestamp":1.7592931441199148e+09,"val/auc":0.5,"_runtime":1326,"test/f1":0,"epoch":13,"val/acc":0.5851063829787234,"test/acc":0.6329787234042553,"val/f1":0,"train/max_loss":0.6857423782348633,"_step":8443,"train/bag_loss":0.6353856325149536,"test/auc":0.5,"_wandb":{"runtime":1326}}

@@ -1,0 +1,3 @@
+{"time":"2025-03-12T01:34:30.726558686+08:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2025-03-12T01:34:30.727096794+08:00","level":"INFO","msg":"created symlink","path":"/home/lin01231/song0760/ACMIL/wandb/run-20250312_013430-ogdtcds1/logs/debug-core.log"}
+{"time":"2025-03-12T01:34:30.727330101+08:00","level":"ERROR+4","msg":"stream_init: failed to fetch credentials: couldn't get API key: settings: failed to get API key from netrc: open /root/.netrc: no such file or directory"}
